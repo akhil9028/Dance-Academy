@@ -1,0 +1,21 @@
+extends base.pug
+
+block style 
+    style
+      include ../static/style.css
+      include ../static/stylecontact.css
+
+block content 
+    h1 Contact Us
+    div#container
+        form(action="/contact" ,method="post" class="myform")
+            input( name="name" class="myinput" type="text" id= "name" placeholder ="Enter your name")
+            input(name="phonenumber" class="myinput" type="number" id= "phonenumber" placeholder ="Enter your phone number")
+            input(name="age" class="myinput" type="number" id= "age" placeholder ="Enter your phone age")
+            input(name="gender" class="myinput" type="text" id= "gender" placeholder ="Enter your gender")
+            input(name="emailid" class="myinput" type="text" id= "emailid" placeholder ="Enter your emailid")
+            input(name="address" class="myinput" type="text" id= "address" placeholder ="Enter your address")
+           
+            //- textarea#address(name="address",class="myinput"  cols="30", rows="10" placeholder="Enter your address") 
+            //- textarea#more(name="more",class="myinput"  cols="30", rows="10", placeholder="more about you..") 
+            button(class="btn") Submit  
